@@ -1,0 +1,27 @@
+Course:
+  type: entity
+  table: courses
+  
+  id:  
+    id:
+      type: smallint
+      unsigned: true
+      nullable: false
+      generator:
+        strategy: AUTO
+  
+  fields: 
+    name:
+      type: string
+      length: 50
+      nullable: false
+    
+    description:
+      type: string
+      length: 255
+      nullable: false
+
+    image_url:
+      type: string
+      length: 255
+      nullable: false
