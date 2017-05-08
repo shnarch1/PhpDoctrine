@@ -3,22 +3,20 @@
 class Course
 {
 
-	private $id;
+	private $id = null;
 	private $name;
 	private $description;
 	private $image_url;
 	private $num_of_students;
 	private $students_list;
 	
-	function __construct($_id=null, $name=null, $description=null, $image_url=null, $num_of_students=null, $students_list=null)
+	function __construct($name=null, $description=null, $image_url=null, $num_of_students=null, $students_list=null)
 	{
-		$this->_id = $_id;
 		$this->name = $name;
 		$this->description = $description;
 		$this->image_url = $image_url;
 		$this->num_of_students = $num_of_students;
 		$this->students_list = $students_list;
-		$this->db = $db;
 	}
 
 	public function getId(){

@@ -17,7 +17,7 @@ $config = Setup::createYAMLMetadataConfiguration(array(__DIR__."/config/yaml"), 
 // database configuration parameters
 $db_config = new \Doctrine\DBAL\Configuration();
 $dbParams = array(
-    'dbname' => 'school2',
+    'dbname' => 'school',
     'user' => 'root',
     'password' => '',
     'host' => '127.0.0.1',

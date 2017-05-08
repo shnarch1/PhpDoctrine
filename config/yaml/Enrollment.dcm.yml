@@ -1,0 +1,39 @@
+Enrollment:
+  type: entity
+  table: enrollments
+  
+  id:  
+    id:
+      type: integer
+      nullable: false
+      generator:
+        strategy: AUTO
+      options:
+        unsigned: true
+  
+  fields: 
+    student_id:
+      type: integer
+      nullable: false
+      options:
+        unsigned: true
+    
+    course_id:
+      type: smallint
+      nullable: false
+      options:
+        unsigned: true
+
+  oneToOne:
+    student:
+      targetEntity: Student
+      joinColumn:
+        name: student_id
+        referencedColumnName: id
+
+  oneToOne:
+    course:
+      targetEntity: Course
+      joinColumn:
+        name: course_id
+        referencedColumnName: id

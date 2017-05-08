@@ -1,10 +1,10 @@
-Course:
+Student:
   type: entity
-  table: courses
+  table: students
   
   id:  
     id:
-      type: smallint
+      type: integer
       nullable: false
       generator:
         strategy: AUTO
@@ -14,14 +14,20 @@ Course:
   fields: 
     name:
       type: string
-      length: 50
+      length: 20
+      nullable: false
+    
+    phone:
+      type: string
+      length: 20
       nullable: false
       unique: true
-    
-    description:
+
+    email:
       type: string
-      length: 255
+      length: 254
       nullable: false
+      unique: true
 
     image_url:
       type: string
