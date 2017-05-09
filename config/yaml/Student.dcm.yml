@@ -33,3 +33,15 @@ Student:
       type: string
       length: 255
       nullable: false
+
+  manyToMany:
+    courses:
+      targetEntity: Course
+      joinTable:
+        name: enrollments
+        joinColumns:
+          student_id:
+            referencedColumnName: id
+        inverseJoinColumns:
+          course_id:
+            referencedColumnName: id

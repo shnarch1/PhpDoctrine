@@ -7,6 +7,7 @@ class Student
     private $phone;
     private $email;
     private $image_url;
+    private $courses;
 	
 	function __construct($name=null, $phone=null, $email=null, $image_url=null)
 	{
@@ -14,6 +15,7 @@ class Student
 		$this->phone = $phone;
 		$this->email = $email;
 		$this->image_url = $image_url;
+		$this->courses = new \Doctrine\Common\Collections\ArrayCollection();
 	}
 
 	public function getId(){
